@@ -1,0 +1,7 @@
+colors : 
+black : #000000
+header grey : #161616
+header border grey : #2f2f2f
+bright yellow : #fed502
+dark yellow : #9b8201
+link blue : #4c98ff

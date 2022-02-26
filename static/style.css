@@ -1,0 +1,119 @@
+/*lobstermobster designed his UI around 8px increments, so every padding margin etc is in multiples of 8px*/
+/*
+
+- html elements
+- general purpose classes
+- ukrainian banner classes
+- header
+- page title
+- reddit
+
+*/
+
+/*HTML ELEMENTS*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: url("fonts/IBMPlexSans-Light.ttf");
+    background-color: #000000;
+    color: #ffffff;
+}
+
+h2, p{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+a{
+    color: #4c98ff;
+}
+
+iframe{
+    margin-bottom: 8px;
+}
+
+/*General purpose elements*/
+.row{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.txt-center {
+    text-align: center;
+}
+
+.bright-yellow{
+    color: #fed502;
+}
+
+.float-right{
+    float: right;
+}
+
+/*ukr-flag are for two <hr> elements one on top of the other, making a banner with the color of Ukraine*/
+.ukr-flag-top{
+    height: 4px;
+    background-color: 	#0057b7;
+    border: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.ukr-flag-bot{
+    height: 4px;
+    background-color: 	#ffd700;
+    border: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+/*HEADER*/
+.header{
+    background-color: #161616;
+    padding: 8px;
+    border-bottom: solid 1px #2f2f2f;
+    margin-bottom: 8px;
+}
+
+.header svg, .header h1{
+    display: inline;
+}
+
+.header svg{
+    margin: 8px 8px 0px 8px;
+}
+
+.header svg text{
+    font-size: 16px;
+}
+
+.header h1{
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.header h1 strong{
+    font-weight: 700;
+}
+
+/*PAGE TITLE*/
+.page-title{
+    color: #fed502;
+    margin-bottom: 16px;
+}
+
+.page-title hr{
+    height: 1px;
+    background-color: #fed502;
+    border: none;
+}
+
+/*REDDIT*/
+#reddit-embed{
+    border: none;
+    width: 100%;
+}
