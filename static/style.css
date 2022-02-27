@@ -89,6 +89,11 @@ iframe{
     display: inline;
 }
 
+.header a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
 .header svg{
     margin: 8px 8px 0px 8px;
 }

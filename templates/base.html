@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %} | Ukrainian Conflict</title>
+    <link rel="stylesheet" href="../static/skeleton.css">
+    <link rel="stylesheet" href="../static/style.css">
+    <script src="//widget.tagembed.com/embed.min.js" type="text/javascript" defer></script>
+</head>
+<body>
+    <div class="header">
+        <a href="/">
+            <svg width="24" height="16">
+                <rect width="24" height="8" style="fill:#0057b7;" />
+                <rect width="24" height="8" y="8" style="fill:#ffd700;" />
+                Sorry, your browser does not support inline SVG.  
+            </svg>
+            <h1> r/UkrainianConflict <strong>Live</strong></h1>
+        </a>
+        <a href="/about" class="float-right">
+            <svg height="16" width="16">
+                <circle cx="8" cy="8" r="8" style="fill:#fed502;" />
+                <text x="6" y="14" fill="black">i</text>
+                Sorry, your browser does not support inline SVG.  
+            </svg>
+        </a>
+    </div>
+
+    <div class="container">
+        {% block intro %}
+        {% endblock %}
+
+        <div class="page-title">
+            <h2>{% block pagetitle %}{% endblock %}</h2>
+            <hr>
+        </div>
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
