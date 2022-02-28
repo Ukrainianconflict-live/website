@@ -4,7 +4,7 @@ This project aims to provide a live feed about Ukrainian invasion.
 
 ## Technical choices
 
-For the sake of security and efficacity, time is a challenge here, and this website 
+For the sake of security and efficiency, time is a challenge here, and this website 
 has to be bulletproof as much as possible.
 
 We made the following choices so far:
@@ -15,7 +15,7 @@ Website shall be accessible via TOR or by users who disabled JS on their browser
 
 #### No framework
 
-Time is a challenge here, no time to learn somtehing common accross all of the volunteers.
+Time is a challenge here, no time to learn something common across all the volunteers.
 
 #### Mobile first
 
@@ -28,7 +28,7 @@ First, install python 3.8+: <https://www.python.org/downloads/release/python-391
 
 Then run in the project directory:
 
-    pip install -r requirement.txt
+    pip install -r requirements.txt
 
 > TODO: complete with venv short howto
 
