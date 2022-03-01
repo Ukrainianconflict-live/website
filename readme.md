@@ -22,6 +22,10 @@ Time is a challenge here, no time to learn something common across all the volun
 Website has to be designed mobile first, since it is the most used terminal used by the one who 
 need it.
 
+#### Flask backend
+
+Flask is a lightweight but mature python framework: https://flask.palletsprojects.com/en/2.0.x/
+
 ## Setup the project
 
 First, install python 3.8+: <https://www.python.org/downloads/release/python-3910/>
@@ -34,9 +38,18 @@ Then run in the project directory:
 
 ## Run the server locally
 
-Run in the project directory:
- 
+Run the following commands in the project directory.
+
+Windows (cmd):
+
     set FLASK_APP=server
+    set FLASK_ENV=development
+    flask run
+
+Linux:
+
+    export FLASK_APP=server
+    export FLASK_ENV=development
     flask run
 
 You should be able to access the website at <http://127.0.0.1:5000/>
