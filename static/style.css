@@ -42,12 +42,25 @@ iframe{
     margin-bottom: 8px;
 }
 
-/*General purpose elements*/
+/*SKELETON OVERRIDES*/
+/*Get rid of max width to give the full width "dashboard" feel on larger devices*/
+.container{
+    max-width: none;
+}
+
 .row{
     margin-top: 8px;
     margin-bottom: 8px;
 }
 
+/*Hack to clearfix the rows, because skeleton uses float on the columns*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*HELPER CLASSES*/
 .txt-center {
     text-align: center;
 }
@@ -118,10 +131,24 @@ iframe{
 }
 
 .page-title hr{
-    /*height: 1px;
-    background-color: #fed502;*/
     border: none;
     border-bottom: solid 1px #fed502;
+}
+
+/*VIDEO IFRAMES*/
+.responsive-iframe{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.responsive-iframe iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
 }
 
 /*REDDIT*/
@@ -129,3 +156,4 @@ iframe{
     border: none;
     width: 100%;
 }
+
