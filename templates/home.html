@@ -3,7 +3,7 @@
 {% block title %}Home{% endblock %}
 
 {% block intro %}
-    <div class="intro">
+<div class="intro" xmlns="http://www.w3.org/1999/html">
         <h2>Ukrainianconflict-live</h2>
 
         <p>
@@ -22,6 +22,54 @@
 {% block pagetitle %}Dashboard{% endblock %}
 
 {% block content %}
+    <div class="row">
+        <h3>Maps</h3>
+
+        <!-- Flight radar 24-->
+        <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5"
+                width="960"
+                height="600">
+        </iframe>
+
+        <!-- Flight radar 24-->
+        <iframe src="https://liveuamap.com/"
+                width="960"
+                height="600">
+        </iframe>
+
+        <!-- Reuters graphic (@see https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/) -->
+        <img src="https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/cdn/images/graphics/bigmap-xl.png"
+             alt="Ukraine Crisis"
+             style="width: 100%; max-width: 960px; background-color: white;"
+        />
+
+        <!-- Live Conflict Tracker -->
+        <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
+        <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor"
+                width="960"
+                height="600">
+        </iframe>
+
+        <!-- NASA Fire Tracker -->
+        <!-- !! CRSF error -->
+        <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z"
+                width="960"
+                height="600">
+        </iframe>
+
+        <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
+             alt="Ukraine Crisis"
+             style="width: 100%; max-width: 960px; background-color: white;"
+        />
+
+        <!-- Radiation map -->
+        <iframe src="https://www.saveecobot.com/en/radiation-maps"
+                width="960"
+                height="600">
+        </iframe>
+    </div>
+
     <div class="row">
         <h3>Livestreams</h3>
     </div>
