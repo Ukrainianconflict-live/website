@@ -32,8 +32,8 @@
                 <button data-val="3">3</button>
                 <button data-val="4">4</button>
                 <button data-val="5">5</button>
-                <button data-val="6">6</button>
-                <button data-val="7">7</button>
+                <!--<button data-val="6">6</button>
+                <button data-val="7">7</button>-->
             </div>
             <!-- Flight radar 24-->
             <div class="responsive-iframe toggle-child" data-val="1">
@@ -55,32 +55,34 @@
                 />
             </div>
 
-            <!-- Live Conflict Tracker -->
-            <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
-            <div class="responsive-iframe toggle-child" data-val="4">
-                <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor">
-                </iframe>
-            </div>
-
-            <!-- NASA Fire Tracker -->
-            <!-- !! CRSF error -->
-            <div class="responsive-iframe toggle-child" data-val="5">
-                <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z">
-                </iframe>
-            </div>
-
             <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
-            <div class="toggle-child toggle-noscript" data-val="6">
+            <div class="toggle-child toggle-noscript" data-val="4">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
                     alt="Ukraine Crisis"
                 />
             </div>
 
             <!-- Radiation map -->
-            <div class="responsive-iframe toggle-child" data-val="7">
+            <div class="responsive-iframe toggle-child" data-val="5">
                 <iframe src="https://www.saveecobot.com/en/radiation-maps">
                 </iframe>
             </div>
+
+            <!-- Live Conflict Tracker -->
+            <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
+            <!-- Commented out because it wasn't loading-->
+            <!--<div class="responsive-iframe toggle-child" data-val="6">
+                <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor">
+                </iframe>
+            </div>-->
+
+            <!-- NASA Fire Tracker -->
+            <!-- !! CRSF error -->
+            <!--Commented out because it wasn't loading-->
+            <!--<div class="responsive-iframe toggle-child" data-val="7">
+                <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z">
+                </iframe>
+            </div>-->
         </div>
     </div>
     <h3>Livestreams</h3>
