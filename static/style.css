@@ -25,7 +25,8 @@ body{
     color: #ffffff;
 }
 
-h2, p{
+h2, p,
+.row h3{
     padding-top: 8px;
     padding-bottom: 8px;
 }
@@ -40,6 +41,7 @@ a{
 
 iframe{
     margin-bottom: 8px;
+    border: 0;
 }
 
 /*SKELETON OVERRIDES*/
@@ -76,7 +78,7 @@ iframe{
 /*ukr-flag are for two <hr> elements one on top of the other, making a banner with the color of Ukraine*/
 .ukr-flag-top{
     height: 4px;
-    background-color: 	#0057b7;
+    background-color:#0057b7;
     border: none;
     padding-bottom: 0;
     margin-bottom: 0;
@@ -84,7 +86,7 @@ iframe{
 
 .ukr-flag-bot{
     height: 4px;
-    background-color: 	#ffd700;
+    background-color: #ffd700;
     border: none;
     padding-top: 0;
     margin-top: 0;
@@ -135,7 +137,7 @@ iframe{
     border-bottom: solid 1px #fed502;
 }
 
-/*VIDEO IFRAMES*/
+/*RESPONSIVE IFRAMES*/
 .responsive-iframe{
     position: relative;
     width: 100%;
@@ -149,6 +151,53 @@ iframe{
     height: 100%;
     left: 0;
     top: 0;
+}
+
+/*TOGGLE COMPONENT*/
+.toggle-parent{
+    position: relative;
+}
+
+.toggle-element{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 1;
+    border: 2px solid black;
+}
+
+.toggle-element button{
+    background: white;
+    border: 0;
+    background: white;
+    border: 0;
+    float: left;
+    padding: 5px;
+    border-right: 2px solid black;
+    cursor: pointer;
+}
+
+.toggle-element button:last-child {
+    border-right: 0;
+}
+
+.toggle-child{
+    display: none;
+}
+
+.toggle-parent[data-show="1"] .toggle-child[data-val="1"],
+.toggle-parent[data-show="2"] .toggle-child[data-val="2"],
+.toggle-parent[data-show="3"] .toggle-child[data-val="3"],
+.toggle-parent[data-show="4"] .toggle-child[data-val="4"],
+.toggle-parent[data-show="5"] .toggle-child[data-val="5"],
+.toggle-parent[data-show="6"] .toggle-child[data-val="6"],
+.toggle-parent[data-show="7"] .toggle-child[data-val="7"]{
+    display: block;
+}
+
+/*MAP SECTION*/
+.map-section img{
+    width: 100%;
 }
 
 /*REDDIT*/

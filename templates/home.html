@@ -22,58 +22,70 @@
 {% block pagetitle %}Dashboard{% endblock %}
 
 {% block content %}
-    <div class="row">
+    <div class="row  map-section">
+        
         <h3>Maps</h3>
+        <div class="toggle-parent" data-show="1">
+            <div class="toggle-element">
+                <button data-val="1">1</button>
+                <button data-val="2">2</button>
+                <button data-val="3">3</button>
+                <button data-val="4">4</button>
+                <button data-val="5">5</button>
+                <!--<button data-val="6">6</button>
+                <button data-val="7">7</button>-->
+            </div>
+            <!-- Flight radar 24-->
+            <div class="responsive-iframe toggle-child" data-val="1">
+                <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5">
+                </iframe>
+            </div>
 
-        <!-- Flight radar 24-->
-        <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5"
-                width="960"
-                height="600">
-        </iframe>
+            <!-- Flight radar 24-->
+            <div class="responsive-iframe toggle-child" data-val="2">
+                <iframe src="https://liveuamap.com/">
+                </iframe>
+            </div>
 
-        <!-- Flight radar 24-->
-        <iframe src="https://liveuamap.com/"
-                width="960"
-                height="600">
-        </iframe>
+            <!-- Reuters graphic (@see https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/) -->
+            <div class="toggle-child toggle-noscript" data-val="3">
+                <img src="https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/cdn/images/graphics/bigmap-xl.png"
+                    alt="Ukraine Crisis"
+                    style="width: 100%;"
+                />
+            </div>
 
-        <!-- Reuters graphic (@see https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/) -->
-        <img src="https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/cdn/images/graphics/bigmap-xl.png"
-             alt="Ukraine Crisis"
-             style="width: 100%; max-width: 960px; background-color: white;"
-        />
+            <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
+            <div class="toggle-child toggle-noscript" data-val="4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
+                    alt="Ukraine Crisis"
+                />
+            </div>
 
-        <!-- Live Conflict Tracker -->
-        <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
-        <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor"
-                width="960"
-                height="600">
-        </iframe>
+            <!-- Radiation map -->
+            <div class="responsive-iframe toggle-child" data-val="5">
+                <iframe src="https://www.saveecobot.com/en/radiation-maps">
+                </iframe>
+            </div>
 
-        <!-- NASA Fire Tracker -->
-        <!-- !! CRSF error -->
-        <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z"
-                width="960"
-                height="600">
-        </iframe>
+            <!-- Live Conflict Tracker -->
+            <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
+            <!-- Commented out because it wasn't loading-->
+            <!--<div class="responsive-iframe toggle-child" data-val="6">
+                <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor">
+                </iframe>
+            </div>-->
 
-        <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
-             alt="Ukraine Crisis"
-             style="width: 100%; max-width: 960px; background-color: white;"
-        />
-
-        <!-- Radiation map -->
-        <iframe src="https://www.saveecobot.com/en/radiation-maps"
-                width="960"
-                height="600">
-        </iframe>
+            <!-- NASA Fire Tracker -->
+            <!-- !! CRSF error -->
+            <!--Commented out because it wasn't loading-->
+            <!--<div class="responsive-iframe toggle-child" data-val="7">
+                <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z">
+                </iframe>
+            </div>-->
+        </div>
     </div>
-
-    <div class="row">
-        <h3>Livestreams</h3>
-    </div>
-
+    <h3>Livestreams</h3>
     <div class="row">
         <div class="six columns">
             <p>DW</p>
@@ -101,15 +113,9 @@
         </div>
     </div>
     <div class="row">
+        
         <div class="six columns">
             <h3>Reddit</h3>
-        </div>
-        <div class="six columns">
-            <h3>Twitter</h3>
-        </div>
-    </div>
-    <div class="row">
-        <div class="six columns">
             <iframe id="reddit-embed"
                     src="https://www.redditmedia.com/r/UkrainianConflict/comments/t0gubl/ukrainianconflict_megathread/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark"
                     sandbox="allow-scripts allow-same-origin allow-popups"
@@ -118,7 +124,8 @@
             </iframe>
         </div>
         <div class="six columns">
-            <div class="tagembed-container" style="width:100%;height:100%;overflow: auto;">
+            <h3>Twitter</h3>
+            <div class="tagembed-container" style="width:100%;height:1075px;overflow: auto;">
                 <div class="tagembed-socialwall"
                     data-wall-id="28302"
                     view-url="https://widget.tagembed.com/28302?view">
