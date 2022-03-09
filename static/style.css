@@ -157,7 +157,7 @@ iframe{
     margin-left: 20px;
 }
 
-.live-stream-columns {
+/*.live-stream-columns {
     display: flex;
     margin-bottom: 20px;
 }
@@ -172,7 +172,7 @@ iframe{
 
 .live-stream-column:last-child {
     margin-left: 10px;
-}
+}*/
 
 .video-column {
     display: flex;
@@ -225,8 +225,8 @@ iframe{
     position: relative;
 }
 
-.menu-selector h3 {
-    padding-right: 20px;
+.header-menu h3 {
+    margin-right: 5px;
 }
 
 .menu-selector .menu-selector__icon {
@@ -295,4 +295,92 @@ iframe{
 /*REUTERS MAP*/
 .reuters-map {
     margin-bottom: 20px;
+}
+
+
+@media (max-width: 2047px), (max-height:1079px) {
+    body {
+        max-height: none;
+    }
+
+    .container {
+        padding: 0 5%;
+    }
+
+    .column-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .remaining-column:first-child {
+        flex-basis: calc( 100% - ( ( 16 / 9 ) * ( ( 100vh - 258px ) / 3 ) + 20px ) );
+    }
+
+    .remaining-column:last-child {
+        flex-direction: row;
+        flex-basis: 100%;
+        margin-left: 0;
+    }
+
+    .reuters-map {
+        width: 100%;
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .remaining-column:first-child {
+        flex-basis: 100%;
+        margin-right: 0;
+    }
+
+    .video-column {
+        flex-basis: 100%;
+        flex-direction: row;
+    }
+
+    .grow-iframe{
+        width: 100%;    
+        height: 0;
+        padding-bottom: 56.25%;
+    }
+
+    .video-wrapper {
+        width: calc( 33% - 12px );
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .video-wrapper:first-child {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+
+    .video-wrapper:last-child {
+        margin-right: 0;
+        margin-left: 12px;
+    }
+
+    .remaining-column:last-child {
+        flex-direction: column;
+    }
+
+    .tagembed-container {
+        height: 1000px !important;
+    }
+
+    .reuters-map {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .video-column{
+        flex-direction: column;
+    }
+
+    .video-wrapper.video-wrapper {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
