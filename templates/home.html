@@ -3,70 +3,71 @@
 {% block title %}Home{% endblock %}
 
 {% block intro %}
+<style>
+    .page-title {
+        display: none;
+    }
+</style>
 <div class="intro" xmlns="http://www.w3.org/1999/html">
-        <h2>Ukrainianconflict-live</h2>
+    <h2>Ukrainianconflict-live</h2>
 
-        <p>
-            This is a initiative from /r/UkrainianConflict volunteers to create a single hub of information
-            regarding the ongoing situation. This is a work in progress.
-            If you'd like to make any suggestions to improve the site,
-            <a href="https://github.com/Ukrainianconflict-live/website">let us know</a>.
-        </p>
+    <p>
+        This is a initiative from /r/UkrainianConflict volunteers to create a single hub of information
+        regarding the ongoing situation. This is a work in progress.
+        If you'd like to make any suggestions to improve the site,
+        <a href="https://github.com/Ukrainianconflict-live/website">let us know</a>.
+    </p>
 
-        <p>
-            Thank you, <span class="bright-yellow">Слава Україні!</span>
-        </p>
-    </div>
+    <p>
+        Thank you, <span class="bright-yellow">Слава Україні!</span>
+    </p>
+</div>
 {% endblock %}
 
 {% block pagetitle %}Dashboard{% endblock %}
 
 {% block content %}
-    <div class="row  map-section">
-        
-        <h3>Maps</h3>
-        <div class="toggle-parent" data-show="1">
-            <div class="toggle-element">
-                <button data-val="1">1</button>
-                <button data-val="2">2</button>
-                <button data-val="3">3</button>
-                <button data-val="4">4</button>
-                <button data-val="5">5</button>
-                <!--<button data-val="6">6</button>
-                <button data-val="7">7</button>-->
-            </div>
-            <!-- Flight radar 24-->
-            <div class="responsive-iframe toggle-child" data-val="1">
-                <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5">
-                </iframe>
+<div class="column-wrapper">
+    <div class="remaining-column">
+        <div class="map-section menu-selector-parent" data-show="1">
+            <div class="header-menu">
+                <h3>Choose Map</h3>
+                <div class="menu-selector">
+                    <img class="menu-selector__icon" src="../static/menu.png">
+                    <ul class="menu-selector__menu">
+                        <li class="menu-selector__menu-item" data-val="1">Live UA map</li>
+                        <li class="menu-selector__menu-item" data-val="2">Flight radar map</li>
+                        <li class="menu-selector__menu-item" data-val="3">Radiation map</li>
+                    </ul>
+                </div>
             </div>
 
-            <!-- Flight radar 24-->
-            <div class="responsive-iframe toggle-child" data-val="2">
+            <!-- Live UA Map -->
+            <div class="grow-iframe menu-selector__element" data-val="1">
                 <iframe src="https://liveuamap.com/">
                 </iframe>
             </div>
 
-            <!-- Reuters graphic (@see https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/) -->
-            <div class="toggle-child toggle-noscript" data-val="3">
-                <img src="https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/cdn/images/graphics/bigmap-xl.png"
-                    alt="Ukraine Crisis"
-                    style="width: 100%;"
-                />
-            </div>
-
-            <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
-            <div class="toggle-child toggle-noscript" data-val="4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
-                    alt="Ukraine Crisis"
-                />
+            <!-- Flight radar 24 -->
+            <div class="grow-iframe menu-selector__element" data-val="2">
+                <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5">
+                </iframe>
             </div>
 
             <!-- Radiation map -->
-            <div class="responsive-iframe toggle-child" data-val="5">
+            <div class="grow-iframe menu-selector__element" data-val="3">
                 <iframe src="https://www.saveecobot.com/en/radiation-maps">
                 </iframe>
             </div>
+
+            <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
+            <!--<div class="toggle-child toggle-noscript" data-val="4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
+                    alt="Ukraine Crisis"
+                />
+            </div>-->
+
+            
 
             <!-- Live Conflict Tracker -->
             <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
@@ -84,11 +85,32 @@
                 </iframe>
             </div>-->
         </div>
+        <!--<div class="live-stream-columns">
+            <div class="live-stream-column">
+                <div class="responsive-iframe">
+                    <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div> 
+            </div>
+            <div class="live-stream-column">
+                <div class="responsive-iframe">
+                    <iframe src="https://www.youtube-nocookie.com/embed/9CdY7t5VKIY"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>-->
     </div>
-    <h3>Livestreams</h3>
-    <div class="row">
-        <div class="six columns">
-            <p>DW</p>
+
+    <div class="video-column">
+        <div class="video-wrapper">
             <div class="responsive-iframe">
                 <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4"
                     title="YouTube video player"
@@ -96,12 +118,11 @@
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
-            </div>
-            
+            </div> 
         </div>
+        
 
-        <div class="six columns">
-            <p>United Nations</p>
+        <div class="video-wrapper">
             <div class="responsive-iframe">
                 <iframe src="https://www.youtube-nocookie.com/embed/9CdY7t5VKIY"
                     title="YouTube video player"
@@ -111,26 +132,42 @@
                 </iframe>
             </div>
         </div>
-    </div>
-    <div class="row">
-        
-        <div class="six columns">
-            <h3>Reddit</h3>
-            <iframe id="reddit-embed"
-                    src="https://www.redditmedia.com/r/UkrainianConflict/comments/t0gubl/ukrainianconflict_megathread/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark"
-                    sandbox="allow-scripts allow-same-origin allow-popups"
-                    scrolling="yes"
-                    height="1075">
-            </iframe>
+
+        <div class="video-wrapper">
+            <div class="responsive-iframe">
+                <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div> 
         </div>
-        <div class="six columns">
-            <h3>Twitter</h3>
-            <div class="tagembed-container" style="width:100%;height:1075px;overflow: auto;">
-                <div class="tagembed-socialwall"
-                    data-wall-id="28302"
-                    view-url="https://widget.tagembed.com/28302?view">
-                </div>
+    </div>
+    <div class="remaining-column"> 
+        <div class="tagembed-container" style="width:100%;overflow: auto;">
+            <div class="tagembed-socialwall"
+                data-wall-id="28302"
+                view-url="https://widget.tagembed.com/28302?view">
             </div>
         </div>
+
+            
+        <div class="reuters-map">
+            <!-- Reuters graphic (@see https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/) -->
+            <img src="https://graphics.reuters.com/UKRAINE-CRISIS/zdpxokdxzvx/cdn/images/graphics/bigmap-xl.png" alt="Ukraine Crisis" style="width: 100%;"  />
+        </div>
     </div>
+</div>
+    
+<!-- <div class="six columns">
+    <h3>Reddit</h3>
+    <iframe id="reddit-embed"
+            src="https://www.redditmedia.com/r/UkrainianConflict/comments/t0gubl/ukrainianconflict_megathread/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark"
+            sandbox="allow-scripts allow-same-origin allow-popups"
+            scrolling="yes"
+            height="1075">
+    </iframe>
+</div> -->
+    
 {% endblock %}

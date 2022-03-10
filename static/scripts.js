@@ -1,15 +1,22 @@
 // Wrap code in IIFE to avoid polluting global namespace
 (function(){
-    function initToggles(){
-        var toggles=document.querySelectorAll('.toggle-element');
+    function initMenus(){
+        var menu=document.querySelectorAll('.menu-selector');
 
-        for(var i=0;i<toggles.length;i++) {
-            toggles[i].addEventListener('click',function(ev){
-                var val=ev.target && ev.target.getAttribute('data-val');
-                if(val){
-                    var parent=ev.target.closest('.toggle-parent');
-                    if(parent){
-                        parent.setAttribute('data-show',val);
+        for(var i=0;i<menu.length;i++) {
+            menu[i].addEventListener('click',function(ev){
+                if(ev.target) {
+                    var val= ev.target.getAttribute('data-val');
+                    if(val){
+                        var parent=ev.target.closest('.menu-selector-parent');
+                        if(parent){
+                            parent.setAttribute('data-show',val);
+                        }
+                    }
+
+                    var targetMenu = ev.target.closest('.menu-selector');
+                    if(targetMenu) {
+                        targetMenu.classList.toggle('menu-selector--open');
                     }
                 }
             });
@@ -17,7 +24,7 @@
     }
     
     function pageInit(){
-        initToggles();
+        initMenus();
     }
     
     if (document.readyState==='complete'||document.readyState==='loaded'||document.readyState==='interactive') {
