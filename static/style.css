@@ -356,7 +356,7 @@ iframe{
     }
 
     .video-wrapper {
-        width: calc( 33% - 12px );
+        width: calc( 33.3% - 12px );
         margin-left: 6px;
         margin-right: 6px;
     }
