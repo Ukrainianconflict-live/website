@@ -1,22 +1,17 @@
 // Wrap code in IIFE to avoid polluting global namespace
 (function(){
-    function initMenus(){
-        var menu=document.querySelectorAll('.menu-selector');
+    function initTabs(){
+        var menu=document.querySelectorAll('.tab-menu');
 
         for(var i=0;i<menu.length;i++) {
             menu[i].addEventListener('click',function(ev){
                 if(ev.target) {
                     var val= ev.target.getAttribute('data-val');
                     if(val){
-                        var parent=ev.target.closest('.menu-selector-parent');
+                        var parent=ev.target.closest('.tab-menu-parent');
                         if(parent){
                             parent.setAttribute('data-show',val);
                         }
-                    }
-
-                    var targetMenu = ev.target.closest('.menu-selector');
-                    if(targetMenu) {
-                        targetMenu.classList.toggle('menu-selector--open');
                     }
                 }
             });
@@ -24,7 +19,7 @@
     }
     
     function pageInit(){
-        initMenus();
+        initTabs();
     }
     
     if (document.readyState==='complete'||document.readyState==='loaded'||document.readyState==='interactive') {
