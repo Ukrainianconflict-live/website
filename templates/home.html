@@ -29,33 +29,27 @@
 {% block content %}
 <div class="column-wrapper">
     <div class="remaining-column">
-        <div class="map-section menu-selector-parent" data-show="1">
-            <div class="header-menu">
-                <h3>Choose Map</h3>
-                <div class="menu-selector">
-                    <img class="menu-selector__icon" src="../static/menu.png">
-                    <ul class="menu-selector__menu">
-                        <li class="menu-selector__menu-item" data-val="1">Live UA map</li>
-                        <li class="menu-selector__menu-item" data-val="2">Flight radar map</li>
-                        <li class="menu-selector__menu-item" data-val="3">Radiation map</li>
-                    </ul>
-                </div>
+        <div class="map-section tab-menu-parent" data-show="1">
+            <div class="tab-menu">
+                <div class="tab-menu__tab" data-val="1">Live UA map</div>
+                <div class="tab-menu__tab" data-val="2">Flight radar map</div>
+                <div class="tab-menu__tab" data-val="3">Radiation map</div>
             </div>
 
             <!-- Live UA Map -->
-            <div class="grow-iframe menu-selector__element" data-val="1">
+            <div class="grow-iframe tab-menu__element" data-val="1">
                 <iframe src="https://liveuamap.com/">
                 </iframe>
             </div>
 
             <!-- Flight radar 24 -->
-            <div class="grow-iframe menu-selector__element" data-val="2">
+            <div class="grow-iframe tab-menu__element" data-val="2">
                 <iframe src="https://www.flightradar24.com/simple?lat=48.26&lon=38.48&z=5">
                 </iframe>
             </div>
 
             <!-- Radiation map -->
-            <div class="grow-iframe menu-selector__element" data-val="3">
+            <div class="grow-iframe tab-menu__element" data-val="3">
                 <iframe src="https://www.saveecobot.com/en/radiation-maps">
                 </iframe>
             </div>
@@ -112,7 +106,7 @@
     <div class="video-column">
         <div class="video-wrapper">
             <div class="responsive-iframe">
-                <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4"
+                <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4?autoplay=1&mute=1"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -124,7 +118,7 @@
 
         <div class="video-wrapper">
             <div class="responsive-iframe">
-                <iframe src="https://www.youtube-nocookie.com/embed/9CdY7t5VKIY"
+                <iframe src="https://www.youtube-nocookie.com/embed/9CdY7t5VKIY?autoplay=1&mute=1"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -135,7 +129,7 @@
 
         <div class="video-wrapper">
             <div class="responsive-iframe">
-                <iframe src="https://www.youtube-nocookie.com/embed/iZebYm-nenY"
+                <iframe src="https://www.youtube-nocookie.com/embed/iZebYm-nenY?autoplay=1&mute=1"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
