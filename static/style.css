@@ -48,11 +48,6 @@ iframe{
     border: 0;
 }
 
-.intro {
-    height: 130px;
-    margin-bottom: 20px;
-}
-
 .container{
     padding: 0 30px;
     box-sizing: border-box;
@@ -93,8 +88,10 @@ iframe{
 
 /*HEADER*/
 .header{
+    display: flex;
+    align-items: center;
     background-color: #161616;
-    padding: 16px 8px 16px 8px;
+    padding: 16px;
     border-bottom: solid 1px #2f2f2f;
     height: 60px;
     box-sizing: border-box;
@@ -108,10 +105,8 @@ iframe{
 .header a{
     color: #ffffff;
     text-decoration: none;
-}
-
-.header svg{
-    margin: 8px 8px 0px 8px;
+    display: flex;
+    align-items: center;
 }
 
 .header svg text{
@@ -121,10 +116,34 @@ iframe{
 .header h1{
     font-weight: 100;
     font-size: 1em;
+    margin-left: 10px;
 }
 
 .header h1 strong{
     font-weight: 700;
+}
+
+.header-icons {
+    margin-left: auto;
+    display: flex;
+}
+
+.discord-link {
+    margin-right: 20px;
+}
+
+.discord-icon {
+    width: 24px;
+}
+
+.about-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fed502;
+    color: black;
+    text-align: center;
+    line-height: 24px;
 }
 
 /*PAGE TITLE*/
@@ -136,6 +155,49 @@ iframe{
 .page-title hr{
     border: none;
     border-bottom: solid 1px #fed502;
+}
+
+/* INFO SECTION*/
+.info-section {
+    display: flex;
+}
+
+.intro {
+    height: 130px;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.donation-links {
+    display: flex;
+}
+
+.donation-section {
+    margin-left: 10px;
+}
+
+.donation-wrapper {
+    margin-right: 10px;
+}
+
+.donation-wrapper:last-child {
+    margin-right: 0;
+}
+
+.donation-links img {
+    width: 100px;
+}
+
+.patreon-link {
+    display: flex;
+    width: 100px;
+    height: 75px;
+    background-color: #fed502;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
 }
 
 /*COLUMNS*/
@@ -157,25 +219,8 @@ iframe{
 
 .remaining-column:last-child {
     margin-left: 20px;
-    max-width: 1200px;
+    max-width: 900px;
 }
-
-/*.live-stream-columns {
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.live-stream-column {
-    flex-basis: calc( 50% - 10px );
-}
-
-.live-stream-column:first-child {
-    margin-right: 10px;
-}
-
-.live-stream-column:last-child {
-    margin-left: 10px;
-}*/
 
 .video-column {
     display: flex;
@@ -216,8 +261,6 @@ iframe{
     top: 0;    
 }
 
-/*Tab top: 3366ba*/
-/*262626 393939 161616*/
 /*MENU SELECTOR COMPONENT*/
 .tab-menu {
     display: flex;
@@ -274,13 +317,6 @@ iframe{
 }
 
 /*TWITTER*/
-/*.tagembed-container {
-    flex-grow: 1;
-    height: auto !important;
-    overflow: auto !important;
-    margin-bottom: 20px;
-}*/
-
 .twitter-feed {
     overflow: auto;
     margin-bottom: 20px;
@@ -339,6 +375,10 @@ iframe{
 }
 
 @media (max-width: 1200px) {
+    .intro {
+        height: auto;
+    }
+
     .remaining-column:first-child {
         flex-basis: 100%;
         margin-right: 0;
@@ -375,10 +415,6 @@ iframe{
         flex-direction: column;
     }
 
-    /*.tagembed-container {
-        height: 1000px !important;
-    }*/
-
     .twitter-feed {
         max-height: 1000px;
     }
@@ -393,8 +429,17 @@ iframe{
 }
 
 @media (max-width: 900px) {
+    .info-section {
+        flex-direction: column;
+    }
+
     .intro {
-        height: auto;
+        margin-bottom: 0;
+    }
+
+    .donation-section {
+        margin-left: 0;
+        margin-bottom: 20px;
     }
 
     .video-column{
