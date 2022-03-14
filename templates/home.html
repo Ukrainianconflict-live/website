@@ -8,20 +8,42 @@
         display: none;
     }
 </style>
-<div class="intro" xmlns="http://www.w3.org/1999/html">
-    <h2>Ukrainianconflict-live</h2>
-
-    <p>
-        This is a initiative from /r/UkrainianConflict volunteers to create a single hub of information
-        regarding the ongoing situation. This is a work in progress.
-        If you'd like to make any suggestions to improve the site,
-        <a href="https://github.com/Ukrainianconflict-live/website">let us know</a>.
-    </p>
-
-    <p>
-        Thank you, <span class="bright-yellow">Слава Україні!</span>
-    </p>
+<div class="info-section">
+    <div class="intro" xmlns="http://www.w3.org/1999/html">
+        <h2>Ukrainianconflict-live</h2>
+    
+        <p>
+            This is a initiative from /r/UkrainianConflict volunteers to create a single hub of information
+            regarding the ongoing situation. This is a work in progress.
+            If you'd like to make any suggestions to improve the site,
+            <a href="https://github.com/Ukrainianconflict-live/website">let us know</a>.
+        </p>
+    
+        <p>
+            Thank you, <span class="bright-yellow">Слава Україні!</span>
+        </p>
+    </div>
+    <div class="donation-section">
+        <h2>Please Consider Donating</h2>
+        <div class="donation-links">
+            <div class="donation-wrapper">
+                <a href="https://www.icrc.org/en/donate" target="_blank">
+                    <img src="../static/red_cross.png" />
+                    
+                </a>
+            </div>
+            <div class="donation-wrapper">
+                <a href="https://www.unicef.org/" target="_blank">
+                    <img src="../static/unicef.png" />
+                </a>
+            </div>
+            <div class="donation-wrapper">
+                <a href="https://www.patreon.com/ukrainianconflict" target="_blank" class="patreon-link">Support the site</a>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}
 
 {% block pagetitle %}Dashboard{% endblock %}
@@ -53,54 +75,7 @@
                 <iframe src="https://www.saveecobot.com/en/radiation-maps">
                 </iframe>
             </div>
-
-            <!-- Wikipedia (@see https://en.wikipedia.org/wiki/2021%E2%80%932022_Russo-Ukrainian_crisis) -->
-            <!--<div class="toggle-child toggle-noscript" data-val="4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Russo-Ukraine_Conflict_%282014-present%29.svg/1280px-Russo-Ukraine_Conflict_%282014-present%29.svg.png"
-                    alt="Ukraine Crisis"
-                />
-            </div>-->
-
-            
-
-            <!-- Live Conflict Tracker -->
-            <!-- API key is t8G8dyyNEssK45ZJ , but I could'nt find a way to use it to embed this map... -->
-            <!-- Commented out because it wasn't loading-->
-            <!--<div class="responsive-iframe toggle-child" data-val="6">
-                <iframe src="https://maphub.net/Cen4infoRes/russian-ukraine-monitor">
-                </iframe>
-            </div>-->
-
-            <!-- NASA Fire Tracker -->
-            <!-- !! CRSF error -->
-            <!--Commented out because it wasn't loading-->
-            <!--<div class="responsive-iframe toggle-child" data-val="7">
-                <iframe src="https://firms.modaps.eosdis.nasa.gov/map/#d:24hrs;@34.1,48.8,6z">
-                </iframe>
-            </div>-->
         </div>
-        <!--<div class="live-stream-columns">
-            <div class="live-stream-column">
-                <div class="responsive-iframe">
-                    <iframe src="https://www.youtube-nocookie.com/embed/V9KZGs1MtP4"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div> 
-            </div>
-            <div class="live-stream-column">
-                <div class="responsive-iframe">
-                    <iframe src="https://www.youtube-nocookie.com/embed/9CdY7t5VKIY"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-        </div>-->
     </div>
 
     <div class="video-column">
@@ -139,12 +114,6 @@
         </div>
     </div>
     <div class="remaining-column"> 
-        <!--<div class="tagembed-container" style="width:100%;overflow: auto;">
-            <div class="tagembed-socialwall"
-                data-wall-id="28302"
-                view-url="https://widget.tagembed.com/28302?view">
-            </div>
-        </div>-->
         <div class="twitter-feed">
             <a class="twitter-timeline" href="https://twitter.com/IntelCrab?ref_src=twsrc%5Etfw">Tweets by IntelCrab</a>
         </div>
@@ -156,15 +125,5 @@
         </div>
     </div>
 </div>
-    
-<!-- <div class="six columns">
-    <h3>Reddit</h3>
-    <iframe id="reddit-embed"
-            src="https://www.redditmedia.com/r/UkrainianConflict/comments/t0gubl/ukrainianconflict_megathread/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark"
-            sandbox="allow-scripts allow-same-origin allow-popups"
-            scrolling="yes"
-            height="1075">
-    </iframe>
-</div> -->
     
 {% endblock %}
