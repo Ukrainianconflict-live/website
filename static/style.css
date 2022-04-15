@@ -334,6 +334,10 @@ iframe{
     margin-bottom: 20px;
 }
 
+.reuters-map video {
+    width: 100%;
+}
+
 
 @media (max-width: 2047px), (max-height:1079px) {
     body {
