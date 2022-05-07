@@ -290,7 +290,8 @@ iframe{
 
 [data-show="1"] .tab-menu__tab[data-val="1"],
 [data-show="2"] .tab-menu__tab[data-val="2"],
-[data-show="3"] .tab-menu__tab[data-val="3"] {
+[data-show="3"] .tab-menu__tab[data-val="3"],
+[data-show="4"] .tab-menu__tab[data-val="4"] {
     border-top-color: #3366ba;
     background-color: #262626;
 }
@@ -301,7 +302,8 @@ iframe{
 
 [data-show="1"] .tab-menu__element[data-val="1"],
 [data-show="2"] .tab-menu__element[data-val="2"],
-[data-show="3"] .tab-menu__element[data-val="3"] {
+[data-show="3"] .tab-menu__element[data-val="3"],
+[data-show="4"] .tab-menu__element[data-val="4"] {
     display: block;
 }
 
